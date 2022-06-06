@@ -4,7 +4,8 @@ using NLayer.Core.DTOs.Respons;
 
 namespace NLayer.Api.Controllers
 {
-    
+    [Route("api/[controller]")]
+    [ApiController]
     public class CustomBaseController : ControllerBase
     {
 
