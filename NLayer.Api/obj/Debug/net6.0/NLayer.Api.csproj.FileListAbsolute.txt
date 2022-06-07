@@ -67,3 +67,6 @@ C:\Users\Gok\Desktop\c# console proje\NLayerUdemyApp\NLayer.Api\obj\Debug\net6.0
 C:\Users\Gok\Desktop\c# console proje\NLayerUdemyApp\NLayer.Api\obj\Debug\net6.0\NLayer.Api.pdb
 C:\Users\Gok\Desktop\c# console proje\NLayerUdemyApp\NLayer.Api\obj\Debug\net6.0\NLayer.Api.genruntimeconfig.cache
 C:\Users\Gok\Desktop\c# console proje\NLayerUdemyApp\NLayer.Api\obj\Debug\net6.0\ref\NLayer.Api.dll
+C:\Users\Gok\Desktop\c# console proje\NLayerUdemyApp\NLayer.Api\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\Gok\Desktop\c# console proje\NLayerUdemyApp\NLayer.Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\Gok\Desktop\c# console proje\NLayerUdemyApp\NLayer.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
