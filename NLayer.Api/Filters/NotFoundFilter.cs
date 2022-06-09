@@ -35,7 +35,7 @@ namespace NLayer.Api.Filters
             }
 
             context.Result = new NotFoundObjectResult(CustomResponsDto<NoContentDto>.Fail(404, $"{typeof(T).Name}({id}) does" +
-                $"not found!"));
+                $" not found!"));
         }
     }
 }
