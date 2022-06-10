@@ -1,6 +1,10 @@
-﻿using NLayer.Core;
+﻿using AutoMapper;
+using Microsoft.Extensions.Caching.Memory;
+using NLayer.Core;
 using NLayer.Core.DTOs.Respons;
+using NLayer.Core.Repositories;
 using NLayer.Core.Services;
+using NLayer.Core.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +16,26 @@ namespace NLayer.Caching
 {
     public class ProductServiceWithCaching : IProductService
     {
+
+        private const string CacheProductKey = "productsCache";
+        private readonly IMapper _mapper;
+        private readonly IMemoryCache _memoryCache;
+        private readonly IProductRepository _repository;
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ProductServiceWithCaching(IMapper mapper, IMemoryCache memoryCache, IProductRepository repository, IUnitOfWork unitOfWork)
+        {
+            _mapper = mapper;
+            _memoryCache = memoryCache;
+            _repository = repository;
+            _unitOfWork = unitOfWork;
+
+            if (!_memoryCache.TryGetValue(CacheProductKey, out _))
+            {
+                _memoryCache.Set(CacheProductKey, _repository.GetAll().ToList());
+            }
+        }
+
         public Task<Product> AddAsync(Product entity)
         {
             throw new NotImplementedException();
